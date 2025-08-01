@@ -4,53 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>redpanda</title>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <a href="#"class="logo">redpanda</a>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Our Profile</a></li>
-            <li><a href="#">Portofolio</a></li>
-            <li><a href="#">Message Us</a></li>
-        </ul>
-    </nav>
-    <section class="firstsect">
-        <div class="welcoming">
-            <h1>Hi <span id="name"></span>, Welcome To Website</h1>
-            <p>Ini adalah website latihan pertama</p>
-        </div>
-    </section>
-    <section class="secondsect">
-        <h1>Our Headquarter</h1>
-        <ul>
-            <li><img src="" alt="">Jakarta</li>
-            <li><img src="" alt="">Bandung</li>
-            <li><img src="" alt="">Surabaya</li
-        </ul>
-    </section>
-    <section class="thirdsect">
-        <h1>Message Us</h1>
-        <form action="">
-            <label for="name">Nama</label>
-            <input type="text" id="name" name="name" placeholder="Nama" required>
+    <header>
+        <nav class="navbar">
+            <a href="#"class="logo">redpanda</a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="profile.html">Our Profile</a></li>
+                <li><a href="#">Portofolio</a></li>
+                <li><a href="#message">Message Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- <hr> -->
+    <main>
+        <section class="firstsect" id="home">
+            <div class="welcoming">
+                <h1>Hi <span class="welcomename" id="welcomename"></span>, Welcome To Our Website</h1>
+                <p>Ini adalah website latihan pertama oleh rivanghibran - Coding Camp RevoU 28 Juli 2025.</p>
+            </div>
+        </section>
+        <section class="secondsect" id="profile">
+            <h1>Our Headquarter</h1>
             <br>
-            <label for="tanggallahir">Tanggal Lahir</label>
-            <input type="date" id="tanggallahir" name="tanggallahir" required>
+            <ul>
+                <li><img src="img/monas.jpg" alt="monas">Jakarta</li>
+                <li><img src="img/bdg.jpg" alt="bandung">Bandung</li>
+                <li><img src="img/surabaya.jpg" alt="surabaya">Surabaya</li>
+            </ul>
+        </section>
+        <section class="thirdsect" id="message">
+            <h1>Message Us</h1>
             <br>
-            <label for="jeniskelamin">Jneis Kelamin</label>
-            <input type="radio" id="laki-laki" name="jeniskelamin" value="laki-laki"> Laki-laki
-            <input type="radio" id="perempuan" name="jeniskelamin" value="Perempuan"> Perempuan
-            <br>
-            <label for="pesan">Pesan</label>
-            <textarea id="pesan" name="pesan" rows="4" cols="50" placeholder="Pesan" required></textarea>
-            <br>
-            <button type="submit">Submit</button>
-        </form>
-    </section>
+            <div class="form-container">
+            <form id="messageForm">
+                <table>
+                <tr>
+                    <td><label for="name">Nama</label></td>
+                    <td>:</td>
+                    <td><input type="text" id="name" name="name" placeholder="Nama" required></td>
+                </tr>
+                <tr>
+                    <td><label for="tanggallahir">Tanggal Lahir</label></td>
+                    <td>:</td>
+                    <td><input type="date" id="tanggallahir" name="tanggallahir" required></td>
+                </tr>
+                <tr>
+                    <td><label>Jenis Kelamin</label></td>
+                    <td>:</td>
+                    <td>
+                    <input type="radio" id="laki-laki" name="jeniskelamin" value="Laki - Laki" required>
+                    <label for="laki-laki">Laki-Laki</label>
+                    <input type="radio" id="perempuan" name="jeniskelamin" value="Perempuan">
+                    <label for="perempuan">Perempuan</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="pesan">Pesan</label></td>
+                    <td>:</td>
+                    <td><textarea id="pesan" name="pesan" rows="4" placeholder="Pesan" required></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align: center;"><button type="submit">Submit</button></td>
+                </tr>
+                </table>
+            </form>
+
+            <div class="result">
+                <div id="result-form"></div>
+            </div>
+            </div>
+        </section>
+    </main>
     <footer>
         <p>Created By <a href="">rivanghibran </a>&copy; 2025</p>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
